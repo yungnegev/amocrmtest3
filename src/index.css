@@ -12,6 +12,7 @@ body,
     height: 100%;
     width: 100%;
     font-family: "Orbitron", sans-serif;
+    color: #fff;
     background: linear-gradient(
         to right,
         #010101 0%,
