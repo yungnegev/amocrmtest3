@@ -45,21 +45,21 @@ const articles: Article[] = [
 const News = () => {
 
   return (
-    <section className='w-full py-[130px] bg-[#000000] px-[60px]'>
+    <section className='w-full py-[130px] bg-[#000000] px-[60px] md:px-[30px]'>
         <div className='flex justify-between mb-[64px]'>
             <div>
                 <div className='flex gap-2'>
                     <img src={fire} alt="fire" />
                     <h2 className='text-[#57B8FF] uppercase'>future of esports</h2>
                 </div>
-                <h1 className='text-[64px] leading-[74px] w-[600px]'>Latest News & Articles</h1>
+                <h1 className='text-[64px] leading-[74px] w-[600px] lg:text-[42px] lg:w-[420px] sm:text-[32px] sm:w-[320px]'>Latest News & Articles</h1>
             </div>
             <div >
-                <button className='h-[70px] w-[175px] bg-[#56b8ff] mt-[105px]'>Read More</button>
+                <button className='h-[70px] w-[175px] bg-[#56b8ff] mt-[105px] lg:hidden'>Read More</button>
             </div>
         </div>
-        <div className='flex lg:flex-col gap-[24px] w-full'>
-            <div className='w-full h-full lg:hidden'>
+        <div className='flex lg:flex-col gap-[24px] w-full xl:flex-col'>
+            <div className='w-full h-full md:hidden'>
                 <div className='flex flex-col min-h-[320px] justify-between'>
                     <a href="#">
                         <img src={featuredArticle.image} alt="newsimage" className='mb-[44px]'/>
@@ -68,13 +68,16 @@ const News = () => {
                     </a>
                 </div>
             </div>
-            <div className='w-full flex h-auto flex-wrap gap-[24px]'>
+            <div className='w-full flex h-auto flex-wrap gap-[24px] sm:flex sm:flex-col sm:items-center'>
                 {articles.map((article, index) => {
                     return (
                         <NewsCard key={index} image={article.image} date={article.date} content={article.content} />
                     )
                 })}
             </div>
+        </div>
+        <div className='sm:w-full sm:flex sm:items-center sm:justify-center'>
+            <button className='h-[70px] w-[175px] bg-[#56b8ff] mt-[105px] hidden lg:block'>Read More</button>
         </div>
     </section>
   )
