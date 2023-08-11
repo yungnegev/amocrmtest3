@@ -6,7 +6,7 @@ import thumb3 from '../assets/thumb3.png';
 
 const Character = () => {
   return (
-    <section className='bg-[#2a313c] h-[695px] px-[60px] mt-[20px] flex lg:flex-col'>
+    <section className='bg-[#2a313c] h-[695px] lg:h-auto px-[60px] mt-[20px] flex lg:flex-col'>
       <div className='h-full w-[50%] lg:w-full'>
         <img src={soldier2} alt='character' className='h-full' />
       </div>
